@@ -1,0 +1,18 @@
+.{
+    .name = .td_micro,
+    .version = "0.1.0",
+    .fingerprint = 0x62008b669873f64c,
+    .minimum_zig_version = "0.16.0-dev.1976+8e091047b",
+    .dependencies = .{},
+    .paths = .{
+        "AGENTS.md",
+        "SPEC.md",
+        "build.zig",
+        "build.zig.zon",
+        "generated",
+        "rules",
+        "src",
+        "tests",
+        "tools",
+    },
+}

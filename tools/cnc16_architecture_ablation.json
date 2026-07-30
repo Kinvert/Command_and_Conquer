@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "suite_id": "cnc16-architecture-v2",
+  "source_snapshot": "cnc13_stable_candidates.json",
+  "source_snapshot_sha256": "f5ede68eb363332ef30fd5885b450982857ea21fa766f6abd57787aa747cd1fc",
+  "candidate_id": "vqsw4ned",
+  "networks": ["MinGRU", "MLP"],
+  "training_seeds": [173, 174, 175],
+  "total_timesteps": 2097152,
+  "baseline_project": "cnc14",
+  "experiment_project": "cnc16",
+  "eval_seed": 39173,
+  "episodes_per_profile": 512
+}

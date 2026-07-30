@@ -1,0 +1,283 @@
+{
+  "version": 1,
+  "source_commit": "75357e8",
+  "candidates": {
+    "5lk552uq": {
+      "label": "cnc10_best",
+      "source_project": "cnc10",
+      "source_steps": 1048576,
+      "reproduce": true,
+      "expected": {
+        "balanced_perf": 0.26271188259124756,
+        "perf": 0.26271185278892517,
+        "close_win_rate": 0.10169491171836853,
+        "medium_win_rate": 0.4237288236618042,
+        "episodes": 118
+      },
+      "env": {
+        "seed": 1,
+        "max_decisions": 12000,
+        "action_abi": 9,
+        "reward_milestone": 0.12635657151603116,
+        "reward_player_infantry": 0.027360448835217835,
+        "reward_enemy_unit_loss": 0.1433137952515089,
+        "reward_enemy_building_loss": 0.9367137379431876,
+        "reward_player_unit_loss": 0.0,
+        "reward_refinery": 0.0,
+        "reward_first_delivery": 0.4,
+        "reward_tiberium_income": 0.016769666989252967,
+        "reward_invalid_action": 0.0
+      },
+      "vec": {
+        "total_agents": 64,
+        "num_buffers": 1,
+        "num_threads": 4
+      },
+      "policy": {
+        "hidden_size": 64,
+        "num_layers": 1,
+        "expansion_factor": 1
+      },
+      "torch": {
+        "network": "MinGRU",
+        "encoder": "Normalize255Encoder",
+        "decoder": "DefaultDecoder"
+      },
+      "train": {
+        "gpus": 1,
+        "seed": 42,
+        "learning_rate": 0.0012000000000000008,
+        "anneal_lr": 1,
+        "min_lr_ratio": 0.0,
+        "gamma": 0.9884274162307737,
+        "gae_lambda": 0.97146919499769,
+        "replay_ratio": 4.0,
+        "clip_coef": 0.7337820433238508,
+        "vf_coef": 5.0,
+        "vf_clip_coef": 3.9561272570492463,
+        "max_grad_norm": 0.41397658916844904,
+        "ent_coef": 0.0016197902889040648,
+        "anneal_ent_coef": 0,
+        "min_ent_coef_ratio": 0.1,
+        "beta1": 0.9989459796239126,
+        "beta2": 0.9999149051936911,
+        "eps": 7.909342746291809e-11,
+        "minibatch_size": 2048,
+        "horizon": 32,
+        "vtrace_rho_clip": 2.6258366307770493,
+        "vtrace_c_clip": 0.41311766202595446,
+        "prio_alpha": 0.3755178254943772,
+        "prio_beta0": 0.09621636006346762,
+        "checkpoint_interval": 512
+      }
+    },
+    "xlidr1ce": {
+      "label": "cnc10_second",
+      "source_project": "cnc10",
+      "source_steps": 1048576,
+      "reproduce": true,
+      "expected": {
+        "balanced_perf": 0.17905405163764954,
+        "perf": 0.18518517911434174,
+        "close_win_rate": 0.10810811072587967,
+        "medium_win_rate": 0.25,
+        "episodes": 81
+      },
+      "env": {
+        "seed": 1,
+        "max_decisions": 12000,
+        "action_abi": 9,
+        "reward_milestone": 0.15672516422962815,
+        "reward_player_infantry": 0.021907876847914974,
+        "reward_enemy_unit_loss": 0.09857471277319783,
+        "reward_enemy_building_loss": 1.0,
+        "reward_player_unit_loss": 0.0,
+        "reward_refinery": 0.061309347723231974,
+        "reward_first_delivery": 0.38971641385281836,
+        "reward_tiberium_income": 0.014129104138276838,
+        "reward_invalid_action": 0.0
+      },
+      "vec": {
+        "total_agents": 64,
+        "num_buffers": 1,
+        "num_threads": 4
+      },
+      "policy": {
+        "hidden_size": 64,
+        "num_layers": 1,
+        "expansion_factor": 1
+      },
+      "torch": {
+        "network": "MinGRU",
+        "encoder": "Normalize255Encoder",
+        "decoder": "DefaultDecoder"
+      },
+      "train": {
+        "gpus": 1,
+        "seed": 42,
+        "learning_rate": 0.0012000000000000008,
+        "anneal_lr": 1,
+        "min_lr_ratio": 0.0,
+        "gamma": 0.9791138695133402,
+        "gae_lambda": 0.9689312675853655,
+        "replay_ratio": 4.0,
+        "clip_coef": 0.927885357232661,
+        "vf_coef": 5.0,
+        "vf_clip_coef": 3.2394564917267674,
+        "max_grad_norm": 0.7078954078285463,
+        "ent_coef": 0.0017026510168932666,
+        "anneal_ent_coef": 0,
+        "min_ent_coef_ratio": 0.1,
+        "beta1": 0.999,
+        "beta2": 0.9998755575897744,
+        "eps": 4.276007802246418e-12,
+        "minibatch_size": 2048,
+        "horizon": 32,
+        "vtrace_rho_clip": 3.1363760683243385,
+        "vtrace_c_clip": 0.1,
+        "prio_alpha": 0.5009086217498543,
+        "prio_beta0": 0.2784266370928253,
+        "checkpoint_interval": 512
+      }
+    },
+    "mnglsikv": {
+      "label": "cnc10_balanced",
+      "source_project": "cnc10",
+      "source_steps": 1048576,
+      "reproduce": true,
+      "expected": {
+        "balanced_perf": 0.1733606606721878,
+        "perf": 0.1735537201166153,
+        "close_win_rate": 0.19672131538391113,
+        "medium_win_rate": 0.15000000596046448,
+        "episodes": 121
+      },
+      "env": {
+        "seed": 1,
+        "max_decisions": 12000,
+        "action_abi": 9,
+        "reward_milestone": 0.11831632441913298,
+        "reward_player_infantry": 0.017797010045728593,
+        "reward_enemy_unit_loss": 0.14595221988896592,
+        "reward_enemy_building_loss": 1.0,
+        "reward_player_unit_loss": -0.00019867018838265298,
+        "reward_refinery": 0.0,
+        "reward_first_delivery": 0.4,
+        "reward_tiberium_income": 0.013366024853907624,
+        "reward_invalid_action": 0.0
+      },
+      "vec": {
+        "total_agents": 64,
+        "num_buffers": 1,
+        "num_threads": 4
+      },
+      "policy": {
+        "hidden_size": 64,
+        "num_layers": 1,
+        "expansion_factor": 1
+      },
+      "torch": {
+        "network": "MinGRU",
+        "encoder": "Normalize255Encoder",
+        "decoder": "DefaultDecoder"
+      },
+      "train": {
+        "gpus": 1,
+        "seed": 42,
+        "learning_rate": 0.001168333172854521,
+        "anneal_lr": 1,
+        "min_lr_ratio": 0.0,
+        "gamma": 0.8825279744789241,
+        "gae_lambda": 0.8923470664767179,
+        "replay_ratio": 4.0,
+        "clip_coef": 1.0,
+        "vf_coef": 5.0,
+        "vf_clip_coef": 2.576988994915692,
+        "max_grad_norm": 0.5136905673182447,
+        "ent_coef": 0.0018765415227006907,
+        "anneal_ent_coef": 0,
+        "min_ent_coef_ratio": 0.1,
+        "beta1": 0.998488491331507,
+        "beta2": 0.999840454050796,
+        "eps": 6.131923006893838e-14,
+        "minibatch_size": 2048,
+        "horizon": 32,
+        "vtrace_rho_clip": 3.1025244521597823,
+        "vtrace_c_clip": 0.1,
+        "prio_alpha": 0.4790558958692444,
+        "prio_beta0": 0.37221827372131744,
+        "checkpoint_interval": 512
+      }
+    },
+    "qj7bux1j": {
+      "label": "historical_2m_control",
+      "source_project": "cnc6",
+      "source_steps": 2097152,
+      "reproduce": false,
+      "control_checkpoint": "checkpoints/cnc_micro/qj7bux1j/0000000002097152.bin",
+      "expected": {
+        "balanced_perf": 0.421753466129303,
+        "perf": 0.4686192572116852,
+        "close_win_rate": 0.20212766528129578,
+        "medium_win_rate": 0.6413792967796326,
+        "episodes": 239
+      },
+      "env": {
+        "seed": 1,
+        "max_decisions": 12000,
+        "action_abi": 9,
+        "reward_milestone": 0.2,
+        "reward_player_infantry": 0.0,
+        "reward_enemy_unit_loss": 0.03176472410973994,
+        "reward_enemy_building_loss": 0.23219496897879333,
+        "reward_player_unit_loss": -0.005791169896719446,
+        "reward_refinery": 0.042555945418244596,
+        "reward_first_delivery": 0.0,
+        "reward_tiberium_income": 0.007081631623240768,
+        "reward_invalid_action": 0.0
+      },
+      "vec": {
+        "total_agents": 64,
+        "num_buffers": 1,
+        "num_threads": 4
+      },
+      "policy": {
+        "hidden_size": 64,
+        "num_layers": 1,
+        "expansion_factor": 1
+      },
+      "torch": {
+        "network": "MinGRU",
+        "encoder": "Normalize255Encoder",
+        "decoder": "DefaultDecoder"
+      },
+      "train": {
+        "gpus": 1,
+        "seed": 42,
+        "learning_rate": 0.0009701129526611177,
+        "anneal_lr": 1,
+        "min_lr_ratio": 0.0,
+        "gamma": 0.975977019771838,
+        "gae_lambda": 0.9297988511653911,
+        "replay_ratio": 4.0,
+        "clip_coef": 1.0,
+        "vf_coef": 4.241147435051642,
+        "vf_clip_coef": 3.579431156424427,
+        "max_grad_norm": 0.6691746653678212,
+        "ent_coef": 0.0013548995888609634,
+        "anneal_ent_coef": 0,
+        "min_ent_coef_ratio": 0.1,
+        "beta1": 0.9963317652430518,
+        "beta2": 0.9989380402338324,
+        "eps": 4.521619692179587e-07,
+        "minibatch_size": 2048,
+        "horizon": 32,
+        "vtrace_rho_clip": 0.9780523042532735,
+        "vtrace_c_clip": 0.1,
+        "prio_alpha": 0.25053580595043257,
+        "prio_beta0": 1.0,
+        "checkpoint_interval": 512
+      }
+    }
+  }
+}

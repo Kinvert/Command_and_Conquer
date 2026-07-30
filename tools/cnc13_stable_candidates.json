@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "source_project": "cnc13",
+  "protocol": {
+    "total_timesteps": 2097152,
+    "training_seeds": [173, 174, 175],
+    "validation_eval_seed": 9173,
+    "validation_episodes_per_profile": 128
+  },
+  "promotion": {
+    "suite_id": "cnc14-promotion-v1",
+    "eval_seed": 19173,
+    "episodes_per_profile": 512,
+    "candidate_ids": ["vqsw4ned", "o5e9lorj", "4pkdtoqj"]
+  },
+  "common": {
+    "env": {
+      "seed": 1,
+      "max_decisions": 12000,
+      "action_abi": 9,
+      "reward_invalid_action": 0.0
+    },
+    "vec": {
+      "total_agents": 64,
+      "num_buffers": 1,
+      "num_threads": 4
+    },
+    "policy": {
+      "hidden_size": 64,
+      "num_layers": 1,
+      "expansion_factor": 1
+    },
+    "torch": {
+      "network": "MinGRU",
+      "encoder": "Normalize255Encoder",
+      "decoder": "DefaultDecoder"
+    },
+    "train": {
+      "gpus": 1,
+      "seed": 42,
+      "total_timesteps": 2097152,
+      "anneal_lr": 1,
+      "min_lr_ratio": 0.0,
+      "anneal_ent_coef": 0,
+      "min_ent_coef_ratio": 0.1,
+      "horizon": 32,
+      "minibatch_size": 2048,
+      "checkpoint_interval": 512
+    }
+  },
+  "candidates": {
+    "hmc7f77r": {
+      "role": "stable_high",
+      "source": {
+        "balanced_perf": 0.39183858036994934,
+        "close_win_rate": 0.47770699858665466,
+        "medium_win_rate": 0.305970162153244,
+        "robust_buckets": [0.0, 0.085, 0.27, 0.361, 0.373]
+      },
+      "env": {
+        "reward_milestone": 0.2,
+        "reward_player_infantry": 0.017399240861920812,
+        "reward_enemy_unit_loss": 0.056889674173719845,
+        "reward_enemy_building_loss": 0.0,
+        "reward_player_unit_loss": -0.0011700160595139453,
+        "reward_refinery": 0.0,
+        "reward_first_delivery": 0.013863068871549667,
+        "reward_tiberium_income": 0.02
+      },
+      "train": {
+        "learning_rate": 0.001131495614763446,
+        "gamma": 0.9515166992744113,
+        "gae_lambda": 0.28178931611346425,
+        "replay_ratio": 4.0,
+        "clip_coef": 1.0,
+        "vf_coef": 5.0,
+        "vf_clip_coef": 5.0,
+        "max_grad_norm": 0.3446007701731145,
+        "ent_coef": 0.002500000000000002,
+        "beta1": 0.993729899016622,
+        "beta2": 0.9968420178231561,
+        "eps": 0.0001,
+        "vtrace_rho_clip": 2.0437125432826218,
+        "vtrace_c_clip": 0.1,
+        "prio_alpha": 0.0,
+        "prio_beta0": 1.0
+      }
+    },
+    "x8biqwx1": {
+      "role": "smooth_plateau",
+      "source": {
+        "balanced_perf": 0.326181,
+        "close_win_rate": 0.276423,
+        "medium_win_rate": 0.37594,
+        "robust_buckets": [0.0, 0.125, 0.302, 0.317, 0.319]
+      },
+      "env": {
+        "reward_milestone": 0.2,
+        "reward_player_infantry": 0.003869492020637666,
+        "reward_enemy_unit_loss": 0.0,
+        "reward_enemy_building_loss": 0.15151216342267904,
+        "reward_player_unit_loss": -0.0024292324614167207,
+        "reward_refinery": 0.006313193210347079,
+        "reward_first_delivery": 0.0,
+        "reward_tiberium_income": 0.019008338139462528
+      },
+      "train": {
+        "learning_rate": 0.001142756821237713,
+        "gamma": 0.9776859645249866,
+        "gae_lambda": 0.3390533192465902,
+        "replay_ratio": 3.4022037514898855,
+        "clip_coef": 0.9812725343112447,
+        "vf_coef": 4.442014573378919,
+        "vf_clip_coef": 4.278150262088477,
+        "max_grad_norm": 0.5721958745972102,
+        "ent_coef": 0.002500000000000002,
+        "beta1": 0.9900286736667442,
+        "beta2": 0.9909485567810721,
+        "eps": 0.000028180216232866056,
+        "vtrace_rho_clip": 3.3856101613314347,
+        "vtrace_c_clip": 0.1,
+        "prio_alpha": 0.3449314897029441,
+        "prio_beta0": 0.870821359400241
+      }
+    },
+    "vqsw4ned": {
+      "role": "profile_balanced",
+      "source": {
+        "balanced_perf": 0.307446,
+        "close_win_rate": 0.303571,
+        "medium_win_rate": 0.311321,
+        "robust_buckets": [0.0, 0.12, 0.32, 0.294, 0.307]
+      },
+      "env": {
+        "reward_milestone": 0.2,
+        "reward_player_infantry": 0.023557773160741098,
+        "reward_enemy_unit_loss": 0.011135930523537963,
+        "reward_enemy_building_loss": 0.0,
+        "reward_player_unit_loss": -0.0037895242163774644,
+        "reward_refinery": 0.0,
+        "reward_first_delivery": 0.0,
+        "reward_tiberium_income": 0.017023407771955025
+      },
+      "train": {
+        "learning_rate": 0.001050809111017901,
+        "gamma": 0.9683312187368112,
+        "gae_lambda": 0.2990261235331877,
+        "replay_ratio": 3.5029455311743467,
+        "clip_coef": 1.0,
+        "vf_coef": 5.0,
+        "vf_clip_coef": 4.5591941978708,
+        "max_grad_norm": 0.37930584235159936,
+        "ent_coef": 0.0017508734135523291,
+        "beta1": 0.9928911247307971,
+        "beta2": 0.9984803215030886,
+        "eps": 0.0001,
+        "vtrace_rho_clip": 4.176526376541711,
+        "vtrace_c_clip": 0.2585496798908753,
+        "prio_alpha": 0.032941403802958846,
+        "prio_beta0": 0.9909711001472885
+      }
+    },
+    "o5e9lorj": {
+      "role": "high_upside_unconfirmed",
+      "source": {
+        "balanced_perf": 0.4117428660392761,
+        "close_win_rate": 0.3525179922580719,
+        "medium_win_rate": 0.47096773982048035,
+        "robust_buckets": [0.033, 0.094, 0.214, 0.289, 0.403]
+      },
+      "env": {
+        "reward_milestone": 0.2,
+        "reward_player_infantry": 0.016192224493705925,
+        "reward_enemy_unit_loss": 0.0,
+        "reward_enemy_building_loss": 0.0,
+        "reward_player_unit_loss": -0.00567813318377186,
+        "reward_refinery": 0.0,
+        "reward_first_delivery": 0.0,
+        "reward_tiberium_income": 0.02
+      },
+      "train": {
+        "learning_rate": 0.0009707509392899857,
+        "gamma": 0.9707485298611811,
+        "gae_lambda": 0.8251071840180736,
+        "replay_ratio": 4.0,
+        "clip_coef": 1.0,
+        "vf_coef": 2.9302205941337327,
+        "vf_clip_coef": 4.39200718250024,
+        "max_grad_norm": 0.4359710721777892,
+        "ent_coef": 0.002500000000000002,
+        "beta1": 0.9946023556874767,
+        "beta2": 0.99999,
+        "eps": 0.000015109843024247346,
+        "vtrace_rho_clip": 2.6097813915636876,
+        "vtrace_c_clip": 0.1,
+        "prio_alpha": 0.25599791994424703,
+        "prio_beta0": 0.9351052496295904
+      }
+    },
+    "4pkdtoqj": {
+      "role": "repeated_default_control",
+      "source": {
+        "balanced_perf": 0.421753466129303,
+        "close_win_rate": 0.20212766528129578,
+        "medium_win_rate": 0.6413792967796326,
+        "robust_buckets": [0.0, 0.202, 0.298, 0.36, 0.31]
+      },
+      "env": {
+        "reward_milestone": 0.2,
+        "reward_player_infantry": 0.0,
+        "reward_enemy_unit_loss": 0.03176472410973994,
+        "reward_enemy_building_loss": 0.23219496897879333,
+        "reward_player_unit_loss": -0.005791169896719446,
+        "reward_refinery": 0.042555945418244596,
+        "reward_first_delivery": 0.0,
+        "reward_tiberium_income": 0.007081631623240768
+      },
+      "train": {
+        "learning_rate": 0.0009701129526611177,
+        "gamma": 0.975977019771838,
+        "gae_lambda": 0.9297988511653911,
+        "replay_ratio": 4.0,
+        "clip_coef": 1.0,
+        "vf_coef": 4.241147435051642,
+        "vf_clip_coef": 3.579431156424427,
+        "max_grad_norm": 0.6691746653678212,
+        "ent_coef": 0.0013548995888609634,
+        "beta1": 0.9963317652430518,
+        "beta2": 0.9989380402338324,
+        "eps": 0.0000004521619692179587,
+        "vtrace_rho_clip": 0.9780523042532735,
+        "vtrace_c_clip": 0.1,
+        "prio_alpha": 0.25053580595043257,
+        "prio_beta0": 1.0
+      }
+    }
+  }
+}
